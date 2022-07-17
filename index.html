@@ -15,15 +15,13 @@
     </SCRIPT>
     <html dir="rtl" lang="en">
     <nav aria-label="breadcrumb" class="header" style="border-radius: 5px ;font-weight:bold">
-      <h1 style="color:#231955;font-size: 40px;font-family:verdana " >IBRAHIM PROFILE</h1>
+      <h1 style="color:white;font-size: 30px;font-family:verdana " >IBRAHIM PROFILE</h1>
 
        <h2 style="color:#4E3620" > *** </h2>
-        <p style="color:red;font-size:20px">ENTER IBRAHIM MOBILE TO VIEW HIS CV</p>
-
-
+        <p style="color:black;font-size:20px">ENTER IBRAHIM MOBILE TO VIEW HIS PROFILE</p>
     </nav>
-    <head >
 
+    <head >
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
         <title>IBRAHIM CV</title>
@@ -44,7 +42,7 @@
             font-size: 30px;
             font-family: "Times New Roman", Times, serif;
             text-align: center;
-            background-image: linear-gradient(#90EE90,white,#afc5ff);
+            background-image: linear-gradient(#B8860B,white,#afc5ff);
 
             }
             button{
@@ -98,9 +96,6 @@
             div{background-color:black;
             }
 
-
-
-
         </style>
     </head>
 
@@ -108,16 +103,16 @@
 
         <form onsubmit="return false" style="font-weight:bold">
         <label for="name"></label>
-        <div class="container" style="border: 2px solid gold; background-color:gray;font-weight:bold" >
-        <input type="text" id="name" name="name" value="" style="color:red;border-color:gold;background-color:white" placeholder="Enter Mobile Number Here"><br>
+        <div class="container" style="border: 2px solid gold; background-color:gray;font-weight:bold;padding: 20px;background-image: linear-gradient(#afc5ff,white,#008B8B)" >
+        <input type="text" id="name" name="name" value="" style="color:red;border-color:gold;background-color:white" placeholder="Enter Number"><br>
 
         </div>
         </form>
 
-      <button class="button-5" role="button"  id="btn-form" type="submit" pys-onClick="sub">View CV</button>
+      <button class="button-5" role="button"  id="btn-form" type="submit" pys-onClick="sub">View My Profile</button>
 
         <p style="font-weight:bold;color:white">***</p>
-        <div class="container" style="border: 2px solid gold; color:red;font-weight:bold" >
+        <div class="container" style="border: 2px solid gold; color:#DAA520;font-weight:bold" >
         <p id = 'output' style="background-color:white"></p>
         </div>
         <p>***</p>
@@ -138,7 +133,7 @@
 
                 else:
                     result_place = Element("output")
-                    result_place.write("Wrong Number, Please Try By Correct Number, Thanks")
+                    result_place.write("Please Enter Ibrahim Mobile Number, Thanks")
 
 
         </py-script>
