@@ -13,13 +13,17 @@
     document.onmousedown = rtclickcheck;
 
     </SCRIPT>
-    <html dir="rtl" lang="en">
+    <html dir="ltr" lang="en">
     <nav aria-label="breadcrumb" class="header" style="border-radius: 5px ;font-weight:bold">
-      <h1 style="color:white;font-size: 30px;font-family:verdana " >IBRAHIM PROFILE</h1>
+      <h1 style="color:white;font-size: 30px;font-family:Noto Sans;padding: 20px; " >IBRAHIM PROFILE</h1>
 
-       <h2 style="color:#4E3620" > *** </h2>
-        <p style="color:black;font-size:20px">ENTER IBRAHIM MOBILE TO VIEW HIS PROFILE</p>
+        <span class="blink">
+       <p  id = 'ctime' style="color:white;font-size: 20px" >Please Wait Seconds</p>
+        </span>
+
+
     </nav>
+
 
     <head >
         <meta charset="UTF-8">
@@ -34,37 +38,43 @@
             head{
             background-color : red;
             font-size: 40px;
-            font-family: "Times New Roman", Times, serif;
+            font-family: "Noto Sans",Noto Sans, serif;
 
             }
             body {
             color : orange;
-            font-size: 30px;
-            font-family: "Times New Roman", Times, serif;
+            font-size: 20px;
+            font-family: "Noto Sans", Noto Sans, serif;
             text-align: center;
-            background-image: linear-gradient(#B8860B,white,#afc5ff);
-
+            background-image: linear-gradient(#556B2F,white,#afc5ff);
             }
-            button{
-            margin-left: 30px;
-            margin-top: 60px;
-            font-family: 'Open Sans';
-            color: #ffffff;
-            text-transform: Capitalize;
-            text-decoration: none;
-            background: #ed3330;
-            padding: 20px;
-            border-radius: 5px;
-            display: inline-block;
-            border: none;
-            transition: all 0.4s ease 0s;
-            background: orange;
-            letter-spacing: 1px;
-            -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-            -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-            box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
-            transition: all 0.4s ease 0s;
-           }
+
+              button {
+              background-color: #4CAF50; /* Green */
+              border: none;
+              color: white;
+              padding: 16px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 20px;
+              font-weight:bold;
+              margin: 4px 2px;
+              transition-duration: 0.4s;
+              cursor: pointer;
+            }
+
+            button {
+              background-color: white;
+              color: black;
+              border: 2px solid #4CAF50;
+            }
+
+            button:hover {
+              background-color: #4CAF50;
+              color: white;
+            }
+
 
             input[type=text],select{
             width: 50%;
@@ -96,6 +106,22 @@
             div{background-color:black;
             }
 
+            .blink {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+      }
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+
+
         </style>
     </head>
 
@@ -103,8 +129,8 @@
 
         <form onsubmit="return false" style="font-weight:bold">
         <label for="name"></label>
-        <div class="container" style="border: 2px solid gold; background-color:gray;font-weight:bold;padding: 20px;background-image: linear-gradient(#afc5ff,white,#008B8B)" >
-        <input type="text" id="name" name="name" value="" style="color:red;border-color:gold;background-color:white" placeholder="Enter Number"><br>
+        <div class="container" style="border: 2px solid gold; background-color:gray;font-weight:bold;font-size:15px;padding: 20px;background-image: linear-gradient(#afc5ff,white,#008B8B)" >
+        <input type="text" id="name" name="name" value="" style="color:red;border-color:gold;background-color:white" placeholder="Enter Number">
 
         </div>
         </form>
@@ -139,16 +165,20 @@
         </py-script>
         </body>
 
-    <div class="container" style="border: 2px solid gold; color:gold;font-weight:bold" >
-        <footer style="font-size: 25px">
+    <div class="container" style="border: 2px solid gold; color:gold;font-weight:bold;padding:20px;" >
+        <footer style="font-size: 20px">
         <marquee direction="left">
-      <p>More than 20 Years Experience in several fields, Computer Solution - Graphic Design -  Accounting & Administration</p>
+      <p>MY SKILLS: ACCOUNTING * ADMINISTRATION * E-COMMERCE * PYTHON * DJANGO * INDESIGN * ILLUSTRATOR * PHOTOSHOP * LANGUAGE: ARABIC - ENGLISH</p>
         </marquee>
-      <p id = 'ctime' style="color:white" >Please Wait</p>
-      <p>***</p>
-      <p style="font-size:20px">Computer Solution</p>
-        <p style="color:orange;font-size:20px">Graphic Design</p>
-            <p style="color:white;font-size:20px">Accounting & Administration</p>
+
+      <p id = 'ntime' style="color:white;font-size: 20px" >***</p>
+      <p style="color:white;font-size:20px">Accounting & Administration</p>
+      <p style="font-size:20px">Computer</p>
+      <p style="color:orange;font-size:20px">Graphic Design</p>
+      <p style="color:orange;font-size:20px">And More ... </p>
+      <p style="color:#ADFF2F;font-size:20px">حسابات - شؤون ادارية - الكمبيوتر - التصميم </p>
+
+
 
 
     </footer>
@@ -163,8 +193,10 @@
      current_time = now.strftime("%Y-%m-%d")
 
      result_place = Element("ctime")
-     result_place.write(current_time)
+     result_place.write("ENTER IBRAHIM MOBILE TO VIEW HIS PROFILE")
 
+     result_place = Element("ntime")
+     result_place.write(current_time)
 
     </py-script>
     </body>
