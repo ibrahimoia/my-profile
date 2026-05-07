@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Omer - Portfolio</title>
+    <title>Ibrahim Omer - Professional Profile</title>
     
     <!-- External Frameworks -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -43,21 +43,6 @@
             box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* Responsive Table */
-        .experience-table-container {
-            overflow-x: auto;
-            margin-top: 20px;
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .table th {
-            background-color: #333 !important;
-            color: white !important;
-        }
-
         /* Modern News Ticker */
         .ticker-wrap {
             width: 100%;
@@ -89,7 +74,19 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
-        /* Fixed Button Link Logic */
+        .experience-table-container {
+            overflow-x: auto;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .table th {
+            background-color: #333 !important;
+            color: white !important;
+        }
+
+        /* Password Protected Buttons */
         .btn-link {
             background-color: #ed3330 !important;
             color: white !important;
@@ -99,7 +96,7 @@
             margin: 8px !important;
             text-decoration: none !important;
             font-weight: bold !important;
-            transition: transform 0.2s, background-color 0.2s !important;
+            transition: 0.3s;
             border: none !important;
             cursor: pointer !important;
         }
@@ -107,7 +104,7 @@
         .btn-link:hover {
             background-color: #c42825 !important;
             transform: translateY(-3px);
-            color: white !important;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .footer-info {
@@ -121,14 +118,34 @@
         @media (max-width: 768px) {
             .profile-img { width: 120px; height: 120px; }
             .title { font-size: 1.5rem !important; }
-            .table { font-size: 0.85rem; }
         }
     </style>
+
+    <script>
+        function checkPassword(fileType) {
+            // Edit your password here
+            const correctPassword = "Ibrahim2026";
+            const userPassword = prompt("Please enter the password to view this document:");
+
+            if (userPassword === correctPassword) {
+                if (fileType === 'docs') {
+                    window.open("https://drive.google.com/file/d/1ikrKSeUxenn7-bpAMEN-xkXjO_TqUkvs/view?usp=sharing", 
+
+"_blank");
+                } else if (fileType === 'works') {
+                    window.open("https://drive.google.com/file/d/1QjLUA3CHCszmux7a7CtzMTRFg3W7843F/view?usp=sharing", 
+
+"_blank");
+                }
+            } else if (userPassword !== null) {
+                alert("Incorrect password. Access denied.");
+            }
+        }
+    </script>
 </head>
 <body>
 
     <header class="header-section">
-        <!-- Replace PHOTO.png with your actual file path -->
         <img src="PHOTO.png" alt="Ibrahim Omer" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
         <h1 class="title is-2 has-text-white">PROFILE</h1>
         <h2 class="subtitle is-4 has-text-warning">IBRAHIM OMER</h2>
@@ -144,7 +161,6 @@
     </div>
 
     <main class="container px-3 mt-5">
-        
         <div class="card-custom has-text-centered">
             <h3 class="title is-4 has-text-danger">QUALIFICATIONS</h3>
             <p class="is-size-5">Applied Sciences & Computer — Documentary Credit</p>
@@ -153,7 +169,7 @@
         <div class="card-custom">
             <h3 class="title is-4 has-text-centered mb-4">PROFESSIONAL EXPERIENCE</h3>
             <div class="experience-table-container">
-                <table class="table is-striped is-fullwidth is-hoverable">
+                <table class="table is-striped is-fullwidth">
                     <thead>
                         <tr>
                             <th>COMPANY</th>
@@ -163,36 +179,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>SNC-LAVALIN</td>
-                            <td>CAFM & Asset Mang. Admin</td>
-                            <td>2019 - 2026</td>
-                            <td>Qatar</td>
-                        </tr>
-                        <tr>
-                            <td>Granada Deco</td>
-                            <td>Accountant & Administration</td>
-                            <td>2010 - 2018</td>
-                            <td>Qatar</td>
-                        </tr>
-                        <tr>
-                            <td>Intl. Printing Press</td>
-                            <td>Graphic Designer & IT</td>
-                            <td>2004 - 2009</td>
-                            <td>Qatar</td>
-                        </tr>
-                        <tr>
-                            <td>Rainbow Est</td>
-                            <td>Graphic Designer & IT</td>
-                            <td>2002 - 2004</td>
-                            <td>Qatar</td>
-                        </tr>
-                        <tr>
-                            <td>Sudaco Investment Co</td>
-                            <td>Administration</td>
-                            <td>1997 - 2002</td>
-                            <td>Sudan</td>
-                        </tr>
+                        <tr><td>SNC-LAVALIN</td><td>CAFM & Asset Mang. Admin</td><td>2019 - 2026</td><td>Qatar</td></tr>
+                        <tr><td>Granada Deco</td><td>Accountant & Admin</td><td>2010 - 2018</td><td>Qatar</td></tr>
+                        <tr><td>Intl. Printing Press</td><td>Graphic Designer & IT</td><td>2004 - 
+
+2009</td><td>Qatar</td></tr>
+                        <tr><td>Rainbow Est</td><td>Graphic Designer & IT</td><td>2002 - 2004</td><td>Qatar</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -202,28 +194,16 @@
     <footer class="footer-info">
         <h3 class="has-text-warning title is-4 mb-5">TECHNICAL SKILLS</h3>
         <p class="is-size-6 mb-5" style="max-width: 700px; margin: 0 auto; color: #ADFF2F;">
-            ACCOUNTING • ADMINISTRATION • E-COMMERCE • PYTHON • DJANGO • INDESIGN • ILLUSTRATOR • PHOTOSHOP • ARABIC • 
-
-ENGLISH
+            ACCOUNTING • ADMINISTRATION • E-COMMERCE • PYTHON • DJANGO • INDESIGN • ILLUSTRATOR • PHOTOSHOP
         </p>
         
-        <hr style="background-color: #333; height: 1px; margin: 2rem 0;">
-
         <div class="contact-details">
             <p class="is-size-4 has-text-white mb-2">📞 009745573026</p>
             <p class="is-size-5 mb-5">📧 gibrahimoia@gmail.com</p>
             
             <div class="buttons is-centered">
-                <a href="https://drive.google.com/file/d/1ikrKSeUxenn7-bpAMEN-xkXjO_TqUkvs/view?usp=sharing" 
-
-target="_blank" class="btn-link">
-                    View Documents
-                </a>
-                <a href="https://drive.google.com/file/d/1QjLUA3CHCszmux7a7CtzMTRFg3W7843F/view?usp=sharing" 
-
-target="_blank" class="btn-link">
-                    View My Works
-                </a>
+                <button onclick="checkPassword('docs')" class="btn-link">View Documents</button>
+                <button onclick="checkPassword('works')" class="btn-link">View My Works</button>
             </div>
         </div>
     </footer>
