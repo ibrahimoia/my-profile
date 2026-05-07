@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Omer - Professional Profile</title>
+    <title>Ibrahim Omer - Portfolio</title>
     
     <!-- External Frameworks -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
@@ -26,9 +26,9 @@
         }
 
         .header-section {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.9);
             color: white;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             text-align: center;
             border-bottom: 4px solid var(--accent-gold);
         }
@@ -40,89 +40,110 @@
             border: 3px solid var(--accent-gold);
             object-fit: cover;
             margin-bottom: 1rem;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
         }
 
+        /* Responsive Table */
         .experience-table-container {
             overflow-x: auto;
             margin-top: 20px;
             background: white;
-            padding: 10px;
+            padding: 15px;
             border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Modern Scrolling News Ticker */
+        .table th {
+            background-color: #333 !important;
+            color: white !important;
+        }
+
+        /* Modern News Ticker */
         .ticker-wrap {
             width: 100%;
             overflow: hidden;
             background-color: #84A108;
             color: white;
-            padding: 10px 0;
+            padding: 12px 0;
+            font-weight: bold;
         }
 
         .ticker {
             display: inline-block;
             white-space: nowrap;
             padding-right: 100%;
-            animation: ticker 30s linear infinite;
+            animation: ticker 25s linear infinite;
         }
 
         @keyframes ticker {
-            0% { transform: translate3d(0, 0, 0); }
+            0% { transform: translate3d(100%, 0, 0); }
             100% { transform: translate3d(-100%, 0, 0); }
         }
 
         .card-custom {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 10px;
-            padding: 20px;
+            padding: 25px;
             margin: 20px auto;
-            max-width: 800px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            max-width: 900px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Fixed Button Link Logic */
+        .btn-link {
+            background-color: #ed3330 !important;
+            color: white !important;
+            padding: 12px 24px !important;
+            border-radius: 6px !important;
+            display: inline-block !important;
+            margin: 8px !important;
+            text-decoration: none !important;
+            font-weight: bold !important;
+            transition: transform 0.2s, background-color 0.2s !important;
+            border: none !important;
+            cursor: pointer !important;
+        }
+
+        .btn-link:hover {
+            background-color: #c42825 !important;
+            transform: translateY(-3px);
+            color: white !important;
         }
 
         .footer-info {
             background: #000;
             color: white;
-            padding: 30px;
+            padding: 40px 20px;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 50px;
         }
 
-        .btn-link {
-            background: #ed3330;
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 5px;
-            transition: 0.3s;
-        }
-
-        .btn-link:hover {
-            background: #ff4500;
-            transform: translateY(-2px);
+        @media (max-width: 768px) {
+            .profile-img { width: 120px; height: 120px; }
+            .title { font-size: 1.5rem !important; }
+            .table { font-size: 0.85rem; }
         }
     </style>
 </head>
 <body>
 
     <header class="header-section">
+        <!-- Replace PHOTO.png with your actual file path -->
         <img src="PHOTO.png" alt="Ibrahim Omer" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
         <h1 class="title is-2 has-text-white">PROFILE</h1>
         <h2 class="subtitle is-4 has-text-warning">IBRAHIM OMER</h2>
-        <p class="is-size-5">Computer & Comprehensive Employee</p>
+        <p class="is-size-5 has-text-grey-light">Computer & Comprehensive Employee</p>
     </header>
 
-    <!-- Professional Scrolling Text -->
     <div class="ticker-wrap">
         <div class="ticker">
-            More than 20 Years Experience in several fields: Accounting & Administration • Computer • Graphic Design • خبرة 
+            More than 20 Years Experience: Accounting & Administration • Computer • Graphic Design • خبرة أكثر من عشرون عام في مختلف المجالات: 
 
-أكثر من عشرون عام في مختلف المجالات 
+الحسابات والشؤون الإدارية والتصميم
         </div>
     </div>
 
-    <main class="container px-3">
+    <main class="container px-3 mt-5">
         
         <div class="card-custom has-text-centered">
             <h3 class="title is-4 has-text-danger">QUALIFICATIONS</h3>
@@ -130,22 +151,22 @@
         </div>
 
         <div class="card-custom">
-            <h3 class="title is-4 has-text-centered">EXPERIENCE</h3>
+            <h3 class="title is-4 has-text-centered mb-4">PROFESSIONAL EXPERIENCE</h3>
             <div class="experience-table-container">
                 <table class="table is-striped is-fullwidth is-hoverable">
                     <thead>
-                        <tr style="background-color: #333;">
-                            <th class="has-text-white">COMPANY</th>
-                            <th class="has-text-white">POSITION</th>
-                            <th class="has-text-white">PERIOD</th>
-                            <th class="has-text-white">COUNTRY</th>
+                        <tr>
+                            <th>COMPANY</th>
+                            <th>POSITION</th>
+                            <th>PERIOD</th>
+                            <th>COUNTRY</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>SNC-LAVALIN</td>
-                            <td>CAFM & Asset Manag. Admin</td>
-                            <td>2019 - 2026</td>
+                            <td>Call Center & Asset Management Admin</td>
+                            <td>2019 - Present</td>
                             <td>Qatar</td>
                         </tr>
                         <tr>
@@ -166,6 +187,12 @@
                             <td>2002 - 2004</td>
                             <td>Qatar</td>
                         </tr>
+                        <tr>
+                            <td>Sudaco Investment Co</td>
+                            <td>Administration</td>
+                            <td>1997 - 2002</td>
+                            <td>Sudan</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -173,19 +200,30 @@
     </main>
 
     <footer class="footer-info">
-        <h3 class="has-text-warning mb-4">SKILLS</h3>
-        <p class="mb-4">ACCOUNTING • ADMINISTRATION • E-COMMERCE • PYTHON • DJANGO • INDESIGN • ILLUSTRATOR • 
+        <h3 class="has-text-warning title is-4 mb-5">TECHNICAL SKILLS</h3>
+        <p class="is-size-6 mb-5" style="max-width: 700px; margin: 0 auto; color: #ADFF2F;">
+            ACCOUNTING • ADMINISTRATION • E-COMMERCE • PYTHON • DJANGO • INDESIGN • ILLUSTRATOR • PHOTOSHOP • ARABIC • 
 
-PHOTOSHOP</p>
+ENGLISH
+        </p>
         
+        <hr style="background-color: #333; height: 1px; margin: 2rem 0;">
+
         <div class="contact-details">
-            <p class="is-size-4">📞 009745573026</p>
-            <p class="is-size-5">📧 gibrahimoia@gmail.com</p>
-            <div class="mt-4">
+            <p class="is-size-4 has-text-white mb-2">📞 009745573026</p>
+            <p class="is-size-5 mb-5">📧 gibrahimoia@gmail.com</p>
+            
+            <div class="buttons is-centered">
                 <a href="https://drive.google.com/file/d/1ikrKSeUxenn7-bpAMEN-xkXjO_TqUkvs/view?usp=sharing" 
-class="btn-link">View Documents</a>
+
+target="_blank" class="btn-link">
+                    View Documents
+                </a>
                 <a href="https://drive.google.com/file/d/1QjLUA3CHCszmux7a7CtzMTRFg3W7843F/view?usp=sharing" 
-class="btn-link">View Portfolio</a>
+
+target="_blank" class="btn-link">
+                    View My Works
+                </a>
             </div>
         </div>
     </footer>
