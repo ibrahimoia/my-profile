@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Omer - Professional Profile</title>
-    
+
     <!-- External Frameworks -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,6 @@
             background: linear-gradient(to bottom, var(--primary-dark), #ffffff, #afc5ff);
             min-height: 100vh;
             margin: 0;
-            padding: 0;
             color: #333;
         }
 
@@ -43,7 +43,6 @@
             box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
         }
 
-        /* Modern News Ticker */
         .ticker-wrap {
             width: 100%;
             overflow: hidden;
@@ -61,8 +60,8 @@
         }
 
         @keyframes ticker {
-            0% { transform: translate3d(100%, 0, 0); }
-            100% { transform: translate3d(-100%, 0, 0); }
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
 
         .card-custom {
@@ -74,37 +73,25 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.15);
         }
 
-        .experience-table-container {
-            overflow-x: auto;
-            background: white;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
         .table th {
-            background-color: #333 !important;
-            color: white !important;
+            background-color: #333;
+            color: white;
         }
 
-        /* Password Protected Buttons */
         .btn-link {
-            background-color: #ed3330 !important;
-            color: white !important;
-            padding: 12px 24px !important;
-            border-radius: 6px !important;
-            display: inline-block !important;
-            margin: 8px !important;
-            text-decoration: none !important;
-            font-weight: bold !important;
-            transition: 0.3s;
-            border: none !important;
-            cursor: pointer !important;
+            background-color: #ed3330;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            margin: 8px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-link:hover {
-            background-color: #c42825 !important;
+            background-color: #c42825;
             transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .footer-info {
@@ -114,99 +101,51 @@
             text-align: center;
             margin-top: 50px;
         }
-
-        @media (max-width: 768px) {
-            .profile-img { width: 120px; height: 120px; }
-            .title { font-size: 1.5rem !important; }
-        }
     </style>
 
     <script>
         function checkPassword(fileType) {
-            // Edit your password here
             const correctPassword = "5454431";
-            const userPassword = prompt("Please enter the password to view this document:");
+            const userPassword = prompt("Enter password:");
 
             if (userPassword === correctPassword) {
                 if (fileType === 'docs') {
-                    window.open("https://drive.google.com/file/d/1ikrKSeUxenn7-bpAMEN-xkXjO_TqUkvs/view?usp=sharing", 
-
-"_blank");
+                    window.open("https://drive.google.com/file/d/1ikrKSeUxenn7-bpAMEN-xkXjO_TqUkvs/view", "_blank");
                 } else if (fileType === 'works') {
-                    window.open("https://drive.google.com/file/d/1QjLUA3CHCszmux7a7CtzMTRFg3W7843F/view?usp=sharing", 
-
-"_blank");
+                    window.open("https://drive.google.com/file/d/1QjLUA3CHCszmux7a7CtzMTRFg3W7843F/view", "_blank");
                 }
             } else if (userPassword !== null) {
-                alert("Incorrect password. Access denied.");
+                alert("Incorrect password.");
             }
         }
     </script>
 </head>
+
 <body>
 
-    <header class="header-section">
-        <img src="PHOTO.png" alt="Ibrahim Omer" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
-        <h1 class="title is-2 has-text-white">PROFILE</h1>
-        <h2 class="subtitle is-4 has-text-warning">IBRAHIM OMER</h2>
-        <p class="is-size-5 has-text-grey-light">Computer, Data Analyses & Comprehensive Employee</p>
-    </header>
+<header class="header-section">
+    <img src="PHOTO.png" alt="Ibrahim Omer" class="profile-img"
+         onerror="this.src='https://via.placeholder.com/150'">
+    <h1 class="title is-2 has-text-white">PROFILE</h1>
+    <h2 class="subtitle is-4 has-text-warning">IBRAHIM OMER</h2>
+    <p class="is-size-5 has-text-grey-light">
+        Computer, Data Analysis & Comprehensive Employee
+    </p>
+</header>
 
-    <div class="ticker-wrap">
-        <div class="ticker">
-            More than 20 Years Experience: Accounting & Administration • Computer • Data Analyses • Graphic Design • خبرة أكثر من عشرون عام في مختلف المجالات: 
+<div class="ticker-wrap">
+    <div class="ticker">
+        More than 20 Years Experience: Accounting & Administration • Computer • Data Analysis • Graphic Design • 
+        خبرة أكثر من عشرون عاماً في الحسابات والإدارة والتصميم
+    </div>
+</div>
 
-الحسابات والشؤون الإدارية والتصميم
-        </div>
+<main class="container mt-5">
+
+    <div class="card-custom has-text-centered">
+        <h3 class="title is-4 has-text-danger">QUALIFICATIONS</h3>
+        <p class="is-size-5">Applied Sciences & Computer — Documentary Credit</p>
     </div>
 
-    <main class="container px-3 mt-5">
-        <div class="card-custom has-text-centered">
-            <h3 class="title is-4 has-text-danger">QUALIFICATIONS</h3>
-            <p class="is-size-5">Applied Sciences & Computer — Documentary Credit</p>
-        </div>
-
-        <div class="card-custom">
-            <h3 class="title is-4 has-text-centered mb-4">PROFESSIONAL EXPERIENCE</h3>
-            <div class="experience-table-container">
-                <table class="table is-striped is-fullwidth">
-                    <thead>
-                        <tr>
-                            <th>COMPANY</th>
-                            <th>POSITION</th>
-                            <th>PERIOD</th>
-                            <th>COUNTRY</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>SNC-LAVALIN</td><td>CAFM & Asset Mang. Admin</td><td>2019-2026</td><td>Qatar</td></tr>
-                        <tr><td>Granada Deco</td><td>Accountant & Admin</td><td>2010-2018</td><td>Qatar</td></tr>
-                        <tr><td>Intl. Printing Press</td><td>Graphic Designer & IT</td><td>2004-2009</td><td>Qatar</td></tr>
-                        <tr><td>Rainbow Est</td><td>Graphic Designer & IT</td><td>2002-2004</td><td>Qatar</td></tr>
-			<tr><td>Sudaco Inv. Co.</td><td>L/C & E-Commerce Employee</td><td>1997-2002</td><td>Sudan</td></tr>
-
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer-info">
-        <h3 class="has-text-warning title is-4 mb-5">TECHNICAL SKILLS</h3>
-        <p class="is-size-6 mb-5" style="max-width: 700px; margin: 0 auto; color: #ADFF2F;">
-            DATA ANALYSIS • ACCOUNTING • ADMINISTRATION • E-COMMERCE • PYTHON • DJANGO • INDESIGN • ILLUSTRATOR • PHOTOSHOP
-        </p>
-        
-        <div class="contact-details">
-            <p class="is-size-4 has-text-white mb-2">📞 009745573026</p>
-            <p class="is-size-5 mb-5">📧 gibrahimoia@gmail.com</p>
-            
-            <div class="buttons is-centered">
-                <button onclick="checkPassword('docs')" class="btn-link">View Documents</button>
-                <button onclick="checkPassword('works')" class="btn-link">View My Works</button>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+    <div class="card-custom">
+        <h3 class="title is-4 has-text-centered mb-4">PROFESSIONAL EXPERIENCE</h3>
